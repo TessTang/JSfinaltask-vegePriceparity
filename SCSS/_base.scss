@@ -1,0 +1,64 @@
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(https://hexschool.github.io/js-filter/assets/bg.jpg);
+  background-size: cover;
+  height: 100vh;
+  font-size: $fontsize;
+  font-family: $fontstyle;
+  font-weight: 700;
+  color: $fontdark;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+}
+
+.btn{
+  border: 2px solid #2A2A2A;
+  color: $fontdark;
+  font-family: $fontstyle;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: $fontsize;
+  box-shadow: 0 1px 0 0 #2A2A2A;
+}
+
+.inline-flex{
+  display: inline-flex;
+}
+
+.font_thin{
+  font-weight: 400;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.d-flex-spacearound {
+  justify-content: space-around;
+}
+
+.d-flex-spacebetween {
+  justify-content: space-between;
+}
+
+
+.bd-4 {
+  border-radius: 4px;
+}
+
+.text-center{
+  text-align: center;
+}

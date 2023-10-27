@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/afffc5a1db.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./SCSS/style.css">
+</head>
+
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top" class="topBtn bd-4"><i
+      class="fa-solid fa-circle-down fa-rotate-180"></i></button>
+  <div class="container">
+    <h1 class="title"><a href="#">Produce農產品比價網</a></h1>
+    <div class="content bd-4">
+      <div class="tab d-flex">
+        <button data-type="N04" type="button" class="btn bd-4">蔬果</button>
+        <button data-type="N05" type="button" class="btn bd-4">水果</button>
+        <button data-type="N06" type="button" class="btn bd-4">花卉</button>
+      </div>
+
+      <div class="d-flex searchCop">
+        <div class="searchInput bd-4 d-flex d-flex-spacebetween">
+          <label for="search">作物名稱</label>
+          <input type="text" id="search" placeholder="請輸入作物名稱" class="bd-4">
+        </div>
+        <button class="btn bd-4">搜尋</button>
+      </div>
+      <div class="searchResult-corp d-flex">
+        <p class="searchResult"></p>
+        <select id="resultSort" class="resultSort bd-4">
+          <option value="0" selected disabled>排序篩選</option>
+          <option value="上價">依上價排序</option>
+          <option value="中價">依中價排序</option>
+          <option value="下價">依下價排序</option>
+          <option value="平均價">依平均價排序</option>
+          <option value="交易量">依交易量排序</option>
+        </select>
+      </div>
+      <table class="table">
+        <thead class="text-center">
+          <tr>
+            <th width="15%">作物名稱</th>
+            <th width="15%">市場名稱</th>
+            <th width="14%">
+              <div class="inline-flex sort-advanced">上價
+                <span>
+                  <i data-price="上價" data-sort="up" class="fas fa-caret-up"></i>
+
+                  <i data-price="上價" data-sort="down" class="fas fa-caret-down"></i>
+                </span>
+              </div>
+            </th>
+            <th width="14%">
+              <div class="inline-flex sort-advanced">中價
+                <span>
+                  <i data-price="中價" data-sort="up" class="fas fa-caret-up"></i>
+
+                  <i data-price="中價" data-sort="down" class="fas fa-caret-down"></i>
+                </span>
+              </div>
+            </th>
+            <th width="14%">
+              <div class="inline-flex sort-advanced">下價
+                <span>
+                  <i data-price="下價" data-sort="up" class="fas fa-caret-up"></i>
+
+                  <i data-price="下價" data-sort="down" class="fas fa-caret-down"></i>
+                </span>
+              </div>
+            </th>
+            <th width="14%">
+              <div class="inline-flex sort-advanced">平均價
+                <span>
+                  <i data-price="平均價" data-sort="up" class="fas fa-caret-up"></i>
+
+                  <i data-price="平均價" data-sort="down" class="fas fa-caret-down"></i>
+                </span>
+              </div>
+            </th>
+            <th width="14%">
+              <div class="inline-flex sort-advanced">交易量
+                <span>
+                  <i data-price="交易量" data-sort="up" class="fas fa-caret-up"></i>
+
+                  <i data-price="交易量" data-sort="down" class="fas fa-caret-down"></i>
+                </span>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="showList text-center">
+          <tr>
+            <td colspan="7" class="text-center font_thin noSearch">請輸入並搜尋想比價的作物名稱^＿^</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <select id="js-moblie-select" class="mobile-select">
+      <option value="0">排序</option>
+      <option value="上價">上價</option>
+      <option value="中價">中價</option>
+      <option value="下價">下價</option>
+      <option value="平均價">平均價</option>
+      <option value="交易量">交易量</option>
+    </select>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
