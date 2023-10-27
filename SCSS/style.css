@@ -133,6 +133,7 @@ body {
   bottom: 20px;
   right: 15px;
   z-index: 99;
+  display: none;
 }
 .topBtn:hover {
   opacity: 1;
